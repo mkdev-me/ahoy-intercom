@@ -6,12 +6,12 @@ require "ahoy/intercom/version"
 Gem::Specification.new do |spec|
   spec.name          = "ahoy-intercom"
   spec.version       = Ahoy::Intercom::VERSION
-  spec.authors       = ["ulizman"]
-  spec.email         = ["ulizman@gmail.com"]
+  spec.authors       = ["Kirill Shirinkin, Oleksandr Ulizko"]
+  spec.email         = ["fodojyko@gmail.com, ulizman@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{IntercomStore for ahoy gem.}
+  spec.description   = %q{IntercomStore for ahoy gem.}
+  spec.homepage      = "https://github.com/mkdev-me/ahoy-intercom"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
