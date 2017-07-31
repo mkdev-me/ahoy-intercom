@@ -6,7 +6,7 @@ module Ahoy
     class Store < ::Ahoy::Stores::ActiveRecordStore
 
       def intercom
-        @intercom ||= Intercom::Client.new(credentials)
+        @intercom ||= ::Intercom::Client.new(credentials)
       end
 
       def track_event(name, properties, options, &block)
