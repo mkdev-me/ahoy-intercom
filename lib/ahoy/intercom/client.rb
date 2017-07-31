@@ -5,17 +5,9 @@ module Ahoy
     module Client
 
       def intercom
-        @intercom ||= ::Intercom::Client.new(credentials)
+        @intercom ||= ::Intercom::Client.new(token: ENV['INTERCOM_ACCESS_TOKEN'])
       end
-
-      def credentials
-        {
-          app_id: ENV['INTERCOM_APP_ID'],
-          api_key: ENV['INTERCOM_APP_SECRET'],
-          token: ENV['INTERCOM_ACCESS_TOKEN']
-        }
-      end
-
+      
     end
   end
 end

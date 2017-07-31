@@ -18,8 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-Set your environment variables `ENV['INTERCOM_APP_ID']` and `ENV['INTERCOM_ACCESS_TOKEN']`.
-Inherit your Ahoy::Store from Ahoy::Intercom::Store in `/config/initializers/ahoy.rb`
+Set your environment variable `ENV['INTERCOM_ACCESS_TOKEN']`.
+About access token see [here](https://developers.intercom.com/docs/personal-access-tokens)
+
+Include Ahoy::Intercom::Tracker to Ahoy::Store in `/config/initializers/ahoy.rb`
+and override `track_event` method.
+Like this:
+```ruby
+def def track_event(name, properties)
+  super
+  track(name, properties)
+end
+```
+
 
 ## License
 
