@@ -19,11 +19,7 @@ Or install it yourself as:
 ## Usage
 
 Set your environment variables `ENV['INTERCOM_APP_ID']` and `ENV['INTERCOM_ACCESS_TOKEN']`.
-Inherit your Ahoy::Store from Ahoy::Intercom::Store in `/config/initialize/ahoy.rb`
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ahoy-intercom. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Inherit your Ahoy::Store from Ahoy::Intercom::Store in `/config/initializers/ahoy.rb`
 
 ## License
 
