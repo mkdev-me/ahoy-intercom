@@ -5,6 +5,7 @@ module Ahoy
   module Intercom
     module Tracker
       include Client
+      
       def track(event_name, properties = {})
         intercom.events.create(
           event_name: event_name,
