@@ -2,6 +2,8 @@ require "spec_helper"
 
 RSpec.describe Ahoy::Intercom do
 
+  before { ahoy.authenticate(user) }
+
   after { intercom.users.delete(intercom_user) }
 
   let!(:ahoy) { Ahoy::Tracker.new }
@@ -9,7 +11,6 @@ RSpec.describe Ahoy::Intercom do
   let!(:intercom_user) { intercom.users.create(user.to_h) }
 
   it "stored into intercom" do
-    allow(ahoy).to receive(:user).and_return(user)
     track('intercom_event', {prop1: 'bye', prop2: 'world'})
     subject = intercom.events.find_all(type: 'user', email: user.email).first
     expect(subject.event_name).to eq("intercom_event")
