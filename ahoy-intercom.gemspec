@@ -6,8 +6,8 @@ require "ahoy/intercom/version"
 Gem::Specification.new do |spec|
   spec.name          = "ahoy-intercom"
   spec.version       = Ahoy::Intercom::VERSION
-  spec.authors       = ["Kirill Shirinkin, Oleksandr Ulizko"]
-  spec.email         = ["fodojyko@gmail.com, ulizman@gmail.com"]
+  spec.authors       = ["Kirill Shirinkin", "Oleksandr Ulizko"]
+  spec.email         = ["fodojyko@gmail.com", "ulizman@gmail.com"]
 
   spec.summary       = %q{IntercomStore for ahoy gem.}
   spec.description   = %q{IntercomStore for ahoy gem.}
