@@ -25,6 +25,8 @@ module Ahoy
           created_at: event.time.to_i,
           metadata: event.properties
         )
+      rescue ::Intercom::ResourceNotFound
+        #nothing do
       end
 
       def credentials
