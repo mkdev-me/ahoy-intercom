@@ -1,12 +1,13 @@
 require 'intercom'
 require 'ahoy/intercom/client'
+require 'logger'
 
 module Ahoy
   module Intercom
     module Tracker
       include Client
 
-      def track(event_name, properties = {})
+      def save_to_intercom(event_name, properties = {})
         intercom.events.create(
           event_name: event_name,
           email: ahoy.user.email,
@@ -15,8 +16,6 @@ module Ahoy
           metadata: properties
         )
       rescue ::Intercom::IntercomError => e
-        require 'logger'
-
         logger = Logger.new(STDOUT)
         logger.level = Logger::WARN
         logger.warn(e.message)

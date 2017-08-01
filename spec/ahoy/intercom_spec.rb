@@ -11,7 +11,7 @@ RSpec.describe Ahoy::Intercom do
   let!(:intercom_user) { intercom.users.create(user.to_h) }
 
   it "stored into intercom" do
-    track('intercom_event', {prop1: 'bye', prop2: 'world'})
+    save_to_intercom('intercom_event', {prop1: 'bye', prop2: 'world'})
     subject = intercom.events.find_all(type: 'user', email: user.email).first
     expect(subject.event_name).to eq("intercom_event")
     expect(subject.metadata).to eq({'prop1' => 'bye', 'prop2'=> 'world'})
