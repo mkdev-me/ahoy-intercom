@@ -21,11 +21,10 @@ Or install it yourself as:
 Set your environment variable `INTERCOM_ACCESS_TOKEN`.
 About access token see [here](https://developers.intercom.com/docs/personal-access-tokens)
 
-Inherit your Ahoy::Store fom Ahoy::Intercom::Store in `/config/initializers/ahoy.rb`
-```ruby
-class Ahoy::Store < Ahoy::Intercom::Store
+Run:
 
-end
+```sh
+rails generate ahoy:stores:intercom
 ```
 
 
