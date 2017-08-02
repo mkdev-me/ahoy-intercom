@@ -21,13 +21,10 @@ Or install it yourself as:
 Set your environment variable `INTERCOM_ACCESS_TOKEN`.
 About access token see [here](https://developers.intercom.com/docs/personal-access-tokens)
 
-Include Ahoy::Intercom::Tracker to Ahoy::Store in `/config/initializers/ahoy.rb`
-and override `track_event` method.
-Like this:
+Inherit your Ahoy::Store fom Ahoy::Intercom::Store in `/config/initializers/ahoy.rb`
 ```ruby
-def track_event(name, properties)
-  super
-  save_to_intercom(name, properties)
+class Ahoy::Store < Ahoy::Intercom::Store
+
 end
 ```
 

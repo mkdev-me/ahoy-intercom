@@ -1,6 +1,5 @@
 require "ahoy/intercom/version"
-require "ahoy/intercom/tracker"
-require "ahoy/intercom/client"
+require "ahoy/intercom/store"
 
 module Ahoy
   module Intercom
