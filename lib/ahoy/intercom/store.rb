@@ -25,7 +25,7 @@ module Ahoy
       end
 
       def credentials
-        { token: ENV['INTERCOM_ACCESS_TOKEN']}
+        { token: ENV['INTERCOM_ACCESS_TOKEN'] }
       end
     end
   end
