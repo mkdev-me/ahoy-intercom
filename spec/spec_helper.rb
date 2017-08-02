@@ -1,7 +1,5 @@
 require "bundler/setup"
 require "ahoy/intercom"
-require "ahoy_matey"
-require "intercom"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

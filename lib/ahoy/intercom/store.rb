@@ -1,4 +1,5 @@
 require 'ahoy_matey'
+require 'intercom'
 
 module Ahoy
   module Intercom
