@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "intercom", '~> 3.5.17'
+  spec.add_dependency "railties"
   spec.add_development_dependency "ahoy_matey"
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
